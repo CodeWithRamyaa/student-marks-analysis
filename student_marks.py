@@ -7,14 +7,21 @@ students = {
 }
 
 print("STUDENT MARKS ANALYSIS")
-print("----------------------")
 
 for name, marks in students.items():
-    print(name, ":", marks)
+    if marks >= 80:
+        grade = "A"
+    elif marks >= 60:
+        grade = "B"
+    elif marks >= 40:
+        grade = "C"
+    else:
+        grade = "F"
+
+    print(name, "| Marks:", marks, "| Grade:", grade)
 
 average = sum(students.values()) / len(students)
 
-print("----------------------")
 print("Average marks:", average)
 print("Highest marks:", max(students.values()))
 print("Lowest marks:", min(students.values()))
