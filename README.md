@@ -1,48 +1,54 @@
-Student Marks Analysis
+Student Marks Analysis 📊
 
-About the Project
-
-A Python-based data analysis project that explores student marks, calculates performance statistics, and visualizes subject-wise results.
+A beginner-friendly Python project that analyzes student marks using Python, Pandas, and Matplotlib.
 
 Features
 
-- Displays student marks and grades
-- Calculates student averages
-- Identifies highest and lowest marks
-- Analyzes subject-wise performance
-- Visualizes average marks using a bar chart
-- Detects missing and invalid marks
-- Saves cleaned data to a CSV file
+- Displays student marks in different subjects.
+- Calculates average marks and identifies performance.
+- Assigns grades based on marks.
+- Reads and analyzes CSV data.
+- Creates tables and charts to visualize results.
+- Includes tests to check the code.
 
 Technologies Used
 
 - Python
 - Pandas
 - Matplotlib
-- Google Colab
-- GitHub
+- CSV
+- Unittest
 
 Project Files
 
-- "student_marks.py" — Student marks analysis
-- "student_marks.csv" — Original student dataset
-- "cleaned_student_marks.csv" — Cleaned dataset
+- "student_marks.py" — main analysis program
+- "student_marks.csv" — student marks dataset
+- "student_performance.png" — performance chart
+- Test files — check the program's calculations
+
+How to Run
+
+1. Install Python.
+2. Install the required libraries:
+   "pip install pandas matplotlib"
+3. Make sure the CSV file is in the correct folder.
+4. Run:
+   "python student_marks.py"
+
+You can also run the project using Google Colab.
 
 What I Learned
 
-- Python dictionaries, loops, and conditions
-- Pandas DataFrames and CSV handling
-- Data cleaning and validation
-- Statistical summaries
-- Data visualization
+- Python functions and conditional statements
+- Lists, dictionaries, and data handling
+- Pandas DataFrames and CSV files
+- Data analysis and visualization
+- Testing and debugging Python programs
 
 Future Improvements
 
-- Analyze larger datasets
-- Add more subjects and student records
-- Compare student performance across subjects
-- Build an interactive dashboard
+- Add more student records.
+- Compare subject-wise performance.
+- Build an interactive student performance dashboard.
 
-Author
-
-BTech Artificial Intelligence and Data Science student, learning Python and Data Science through practical projects.
+Author: AI & Data Science Student
