@@ -1,0 +1,71 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("student_marks.csv")
+
+subjects = ["Maths", "Science", "English"]
+
+# Calculate average marks for each subject
+subject_averages = df[subjects].mean()
+
+print("AVERAGE MARKS BY SUBJECT")
+print(subject_averages)
+
+# Find the best-performing subject
+best_subject = subject_averages.idxmax()
+print("\nBest-performing subject:", best_subject)
+
+# Draw a bar chart
+subject_averages.plot(kind="bar")
+
+plt.title("Average Marks by Subject")
+plt.xlabel("Subject")
+plt.ylabel("Average Marks")
+plt.ylim(0, 100)
+plt.xticks(rotation=0)
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+
+
+
+  
+  import pandas as pd
+
+# Load the dataset
+df = pd.read_csv("student_marks.csv")
+
+subjects = ["Maths", "Science", "English"]
+
+# Convert subject marks to numeric values
+for subject in subjects:
+    df[subject] = pd.to_numeric(df[subject], errors="coerce")
+
+# Check missing values
+print("MISSING VALUES BEFORE CLEANING")
+print(df[subjects].isnull().sum())
+
+# Check invalid marks (outside 0–100)
+for subject in subjects:
+    invalid = (df[subject] < 0) | (df[subject] > 100)
+    df.loc[invalid, subject] = float("nan")
+
+# Fill missing marks with that subject's average
+for subject in subjects:
+    df[subject] = df[subject].fillna(df[subject].mean())
+
+# Calculate averages after cleaning
+df["Average"] = df[subjects].mean(axis=1)
+
+print("\nCLEANED STUDENT DATA")
+print(df.to_string(index=False))
+
+# Save the cleaned dataset separately
+df.to_csv("cleaned_student_marks.csv", index=False)
+
+print("\nCleaned data saved successfully!")
